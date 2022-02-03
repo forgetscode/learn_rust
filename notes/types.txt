@@ -1,0 +1,64 @@
+ints, default int is i32
+
+    i8,u8, i16, u16, i32, u32, i64, u64, i128, u128
+
+casts
+
+    let foo = 3_i64;
+    let bar = foo as i32;
+
+
+floats
+
+    f32, f64
+
+Fixed-size arrays
+
+    let arr: [i32; 4] = [1,2,3,4];
+
+Dynamic size arrays, represented as slices, carry a pointer to the array and a length
+
+    let arr: &[i32] = &[1,2,3,4];
+
+struct
+
+    struct Point {
+        x: i32,
+        y: i32,
+    }
+
+    let p = Point { x: 1, y: 1 };
+    access ----- p.x
+
+tuple
+    let p = (1, 2);
+    access ----- p.0
+
+tuple struct
+
+    struct Point(i32,i32);
+
+    let p = Point(1, 2);
+    access ----- p.0
+
+enum
+
+    enum Direction {
+        Right,
+        Left,
+        Up,
+        Down,
+    }
+
+    let direction = Direction::Left;
+
+    enum with struct
+
+    enum Actions {
+        StickAround,
+        MoveTo { x: i32, y: i32},
+    }
+
+    let action = Actions::MoveTo { x: 0, y: 0 };
+    
+null

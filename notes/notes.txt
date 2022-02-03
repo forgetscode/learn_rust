@@ -1,0 +1,17 @@
+Reasons to learn Rust
+
+Safe
+    Memory Safe
+    No illegal memory access
+    Deallocation automated
+    Safe from memory leaks
+
+Concurrent
+    Type system detects concurrent access to data
+    Protection from data races
+
+Fast
+    Properties guranteed at compile time with no runtime cost
+    Based on LLVM
+    No reflection
+    Zero-cost abstractions
